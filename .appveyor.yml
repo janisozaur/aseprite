@@ -16,6 +16,7 @@ build_script:
   - cd build
   - cmake .. -G "NMake Makefiles" -DENABLE_UI=%ENABLE_UI%
   - cmake --build . --parallel 2
+  - xcopy c:\OpenSSL-Win64\*dll bin
 
 artifacts:
   - path: build\bin
