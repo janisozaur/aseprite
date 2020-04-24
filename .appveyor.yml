@@ -1,7 +1,7 @@
 environment:
   matrix:
-    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-      VCVARS_FILE: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
+      VCVARS_FILE: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat
       VCVARS_ARG:
       ENABLE_UI: ON
 
@@ -18,9 +18,5 @@ build_script:
   - cmake --build . --parallel 2
 
 artifacts:
-  - path: bin
-    name: bin
   - path: build\bin
     name: buildbin
-  - path: '**\bin'
-    name: allbin
