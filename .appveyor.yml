@@ -20,3 +20,7 @@ build_script:
 artifacts:
   - path: bin
     name: bin
+  - path: build\bin
+    name: buildbin
+  - path: '**\bin'
+    name: allbin
